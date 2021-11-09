@@ -1,0 +1,45 @@
+"agents" --> the count proceeds per transaction's role, i.e., there might be multiple entries with the same agent_id
+
+agent_id, trans_id, char_id, name, gramm_sex, role, co_agency, akin_to, patron, attributes, signature
+
+agent_id = agent database identification number = identifies a specific legal agent within the database created.
+The id is composed of the letter I(for individual)/G(for group/institution) + the number of entry in the database + "_[sub_cont]".
+E.g., i1_lucca is the first individual legal agent entry for Lucca.
+  Type () = string
+
+trans_id = transaction database identification number = identifies a specific legal transaction within the database created.
+The id is composed of the char_id in which the transaction is mentioned + the entry number of the transaction in the database. The database counts the number of transactions, not the number of mentions of a transaction.
+  Type() = string
+
+char_id =  charter database identification number = individual number that identifies a specific charter within the database created.
+The id is composed of the ISO 3166 country Alpha-2 code and the entry number in the database. The country
+code follows the CHLA division based on collection. E.g., IT1 is the id for the first Italian charter entered in the
+database.
+  Type() = string
+
+name = name of the agent, as found in the charter. Names have not been normalized. Their spelling represents the original one found in the charter.
+  Type() = string
+
+gramm_sex = grammatical sex = grammatical sex attributed on the basis of the morphology of the name in Latin. In cases where the attribution was unclear from the name and collateral factors, male | female was maintained. Options: male | female | (male | female)
+  Type () = string
+
+role = role = role that the legal agent takes up in the transaction alone or as part of a group. Options: witness | seller | buyer | exchanger | confirmer | benefactor | [...]. Details about the definition of each of these categories can be found in the appendix to the thesis "Legal agency roles"
+  Type () = string
+
+co_agency = co-agency = indicates whether an individual is acting together with someone else. In order for a co-agency to be categorized as such, the text must offer expressions such as "in accordance with", "alongside (cum)" etc. The verb can appear in the singular form or in the plural. For group agents, this variable takes the value 0 to define "not applicable".
+  Type () = Boolean
+
+akin_to = akin to = indicates whether the agent has any relation to another legal agent inscribed in the database. The field takes the agent_id value for the person they are related to.
+  Type () = string
+
+patron = legal agency consented by = indicates whether the agent's authority derives from a third party. This can be a family member (FM), a political actor (PA), a clergyman (C) or any combination of these.
+  Type () = string
+
+attributes = attributes of the agent = reports verbatim as a list of items [] the attributes of the agent in Latin. The Latin is normalized in order to offer meaningful comparisons with the rest of the data.
+  Type () = string
+
+signature = signature of the agent = indicates whether the agent is signing the document and what evidence is available for such claims. In case the document is a copy, this variable takes value 0 to define "not applicable". Options: signer | autographer | (signer | autographer) | not_signer.
+  Type () = string
+
+m_trans = multiple transactions = indicates whether the agent is implied in different transactions, whether in the same role or in different roles. In case they are, this variable reports a list of items [] with the trans_id of the involved transactions. In case they are not, this variable takes the value NA to define "missing data", for we cannot be sure whether the agent took part in transactions whose records might have been lost for random reasons. This is however a case of MAR (Missing At Random) rather than MCAR (Missing Completely At Random) because there might have also been systematic reasons why an agent was not given legal agency in more than one transaction.
+  Type () = string

@@ -1,0 +1,82 @@
+'READ ME' FILE FOR 'GENDER AND LEGAL CUSTOM DATABASE'
+
+************
+PROJECT INFORMATION
+************
+This relational database comprises of metadata relevant to the study of gender in Carolingian
+legal custom. All the data is taken from charters contained in the CHLA which date between 8th
+and 9th century (included). The database is organized in individual datasets created in tabular form
+(with .csv file extension) according of the principle of Tidy Data, so that each sheet contains
+ a single observational unit. All the individual datasets are computationally tractable. The review
+ and analysis of this database, the datasets and the data itself should be mingled with the reading
+ of the doctoral dissertation by the same author. Any other way of using this material should be
+ considered a misuse.
+
+ Author: Vania Buso
+ e-mail: vania.buso@gmail.com
+
+ Date of data collection: 2020-09 to 202?-??
+
+ **********************
+ DATA MANAGEMENT TOOLS
+ **********************
+ 1. Metadata and data generation: Microsoft Excel (online) - OneDrive Institutional Package
+ 2. Data cleaning: OpenRefine
+ 3.Quantitative analysis:
+  preliminary: Data Wrapper (numeric vectors, matrices and datasets), R 1.4.1.
+  definitive: R 1.4.1., pandas 1.3 - Python 3.9.6
+ 4.Qualitative analysis: see the associated doctoral dissertation
+ 5.Data storage: Harvard Dataverse (separate datasets), nodegoat.net (database)
+
+ ************************
+ DATA ACCESS INFORMATION
+ ************************
+1. The use of this database is restricted to non-profit and research use.
+2. Links to publicly access the database:
+
+****************************
+METHODS OF DATA COLLECTION
+****************************
+
+1. Data collection: detailed explanation about the methods and principled followed during data collection
+can be found in the doctoral dissertation that accompanies this database.
+
+2. Data processing methods: detailed explanation about this process can be found in the
+doctoral dissertation that accompanies this database.
+
+3. Instrument information: all the data was cleaned with OpenRefine once it had been compiled in .csv files.
+Preliminary visual analysis was performed through the built-in tools in nodegoat.net and Data Wrapper (URL:).
+In depth EDA and visualization were performed in R 1.4.1. and Python 3.9.6. (with pandas). At no stage, after
+the creation of the .csv files, were the files processed with tools that might have altered their formatting (e.g., Excel).
+
+4. Quality assurance procedures: At no stage, after the creation of the .csv files, were the files
+processed with tools that might have altered their formatting (e.g., Excel).
+
+5. Analysis methods: EDA methods were adapted from: Arnold, Taylor and Tilton, Lauren. "Humanities Data in R: Exploring
+Networks, Geospatial Data, Images, and Text." Springer, 2015.
+input(details on the packages used for R and Python)
+input(details on where to find the code used in the analysis)
+
+************************
+SUMMARY OF DATA FILES
+************************
+
+1. List of data files ### or is it 'datasets'?
+	Filename:char_mdata
+	Short description: .csv file containing relevant descriptive metadata on the charters included
+  in the database. The variable 'f_agent' (type() = Boolean) indicates whether the charter contains
+  reference to any female-sexed legal agent.
+
+	Filename:
+	Short description:
+
+	Filename:
+	Short description:
+
+	Filename:
+	Short description:
+
+2. Relationships between files
+	Provide information about any linkages between files or variables within files.
+
+3. Information about multiple versions of the same file.

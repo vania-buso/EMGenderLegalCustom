@@ -1,0 +1,18 @@
+"transactions" --> the count proceeds per transaction. I.e., one entry = one transaction.
+
+trans_id, char_id, f_agent, f_agent_id, attributes, mention
+
+trans_id = transaction database identification number = identifies a specific legal transaction within the database created.
+The id is composed of the char_id in which the transaction is mentioned + the entry number of the transaction in the database. The database counts the number of transactions, not the number of mentions of a transaction.
+  Type() = string
+
+char_id = charter database identification number = individual number that identifies a specific charter within the database created.
+The id is composed of the ISO 3166 country Alpha-2 code and the entry number in the database. The country
+code follows the CHLA division based on collection. E.g., IT1 is the id for the first Italian charter entered in the
+database.
+  Type() = string
+
+f_agent = female agent = identifies whether the charter mentions at least one female-sexed legal agent in the transaction. This includes groups of female agents (e.g., female religious institutions). The sexing of the agent is based on the morphology of the name taken into consideration. This variable is not determined by the gender of the agent, but by its grammatical sexing. In cases where the attribution was unclear from the name and collateral factors, male | female was maintained. Options: male | female | (male | female)
+  Type () = string
+
+mention = transaction as mention = identifies whether the transaction is mention or one of the main ones of the charter.

@@ -1,0 +1,34 @@
+"chart_mdata" --> the count proceeds per charter. I.e., one entry = one charter.
+id, cont, sub_cont, coll, rep, orig, authen, compl, issue_aut, issue_scr, issue_date, f_agent
+
+char_id = charter database identification number = individual number that identifies a specific charter within the database created.
+The id is composed of the ISO 3166 country Alpha-2 code and the entry number in the database. The country
+code follows the CHLA division based on collection. E.g., IT1 is the id for the first Italian charter entered in the
+database.
+  Type() = string
+cont = context = case study context taken into consideration. Options: regnum italiae | bavaria
+  Type() = string
+sub_cont = sub-context = case study context taken into consideration. Options: piacenza | lucca | freising
+  Type() = string
+coll = collection = the original collection the item was part of.
+  Type() = string
+rep = repository = the collection, volume or book from which the charter has been analyzed for this study.
+  Type() = string
+orig = original = defines whether the charter is original or a copy.
+  Type() = Boolean ### might want to change it to string, in case some of the charters might be a mix of original & copy
+forg = forgery = defines whether the charter is a forgery or authentic. Options: authentic | forgery | mix
+  Type() = string
+  ###alternative: type() = int with a scale 0 | 1 | 2 arbitrarily assigned instead of authentic | forgery | mix
+issue_aut = issuing authority = authority invoked by the scribe in issuing the charters
+  Type () = string
+issue_scr = issuing scribe = the person drafting the document. It can include name, title or both
+  Type() = string
+issue_date = issuing date = the date in which the document was drafted. This is replicated verbatim from the document
+in case the date in standard ISO 8601 (YYYY-MM-DD or its truncated and/or incomplete forms) is not recoverable.
+  Type() = string
+  ##alternative: use datetime
+f_agent = identifies whether the charter mentions at least one female-sexed legal agent. This includes
+groups of female agents (e.g., female religious institutions). The sexing of the agent
+is based on the morphology of the name taken into consideration. This variable is not determined by the gender of the agent, but by its grammatical sexing.In cases where the attribution was unclear from the name and collateral factors, male | female was maintained. Options: male | female | (male | female)
+  Type () = string
+  ###might want to change this to an integer on a scale 0 | 1 | 2 (0 = female sexing, 1 = undecisive, 2 = male sexing)
