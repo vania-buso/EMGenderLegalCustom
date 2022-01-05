@@ -17,7 +17,10 @@ code follows the CHLA division based on collection. E.g., IT1 is the id for the 
 database.
   Type() = string
 
-name = name of the agent, normalized according to [select lexicon/ dictionary]. The normalization was introduced in order to allow comparisons. 
+name = name of the agent, as it appears in the charter. 
+  Type() = string
+  
+name_norm = name of the agent, normalized according to [select lexicon/ dictionary]. The normalization was introduced in order to allow comparisons. 
   Type() = string
 
 gramm_sex = grammatical sex = grammatical sex attributed on the basis of the morphology of the name in Latin. In cases where the attribution was unclear from the name and collateral factors, male | female was maintained. Options: male | female | (male | female)
