@@ -16,3 +16,5 @@ f_agent = female agent = identifies whether the charter mentions at least one fe
   Type () = string
 
 mention = transaction as mention = identifies whether the transaction is mention or one of the main ones of the charter.
+
+key_describe = brief description of the nature and type of the transaction. 
