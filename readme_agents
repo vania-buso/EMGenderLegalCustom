@@ -40,6 +40,9 @@ attributes = attributes of the agent = reports verbatim as a list of items [] th
 
 signature = signature of the agent = indicates whether the agent is signing the document and what evidence is available for such claims. In case the document is a copy, this variable takes value 0 to define "not applicable". Options: signer | autographer | (signer | autographer) | not_signer.
   Type () = string
+ 
+ subscribing = scribe's subscription = indicates wehther the scribe declares his subscription in the charter
+   Type() = Boolean
 
 m_trans = multiple transactions = indicates whether the agent is implied in different transactions, whether in the same role or in different roles. This variable consistutes of a guess made on the basis of chronological and geographical consistency. In case an agent is deemed to be involved in various transactions, this variable reports a list of items [] with the trans_id of the relevant transactions. In case they are not, this variable takes the value NA to define "missing data", for we cannot be sure whether the agent took part in transactions whose records might have been lost for random reasons. This is however a case of MAR (Missing At Random) rather than MCAR (Missing Completely At Random) because there might have also been systematic reasons why an agent was not given legal agency in more than one transaction.
   Type () = string
