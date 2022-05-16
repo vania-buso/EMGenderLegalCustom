@@ -46,7 +46,7 @@ doctoral dissertation that accompanies this database.
 
 3. Instrument information: all the data was cleaned with OpenRefine once it had been compiled in .csv files.
 Preliminary visual analysis was performed through the built-in tools in nodegoat.net and Data Wrapper (URL:).
-In depth EDA and visualization were performed in R 1.4.1. and Python 3.9.6. (with pandas). At no stage, after
+In depth EDA and visualization were performed in R 1.4.1. and Python 3.9.6. At no stage, after
 the creation of the .csv files, were the files processed with tools that might have altered their formatting (e.g., Excel).
 
 4. Quality assurance procedures: At no stage, after the creation of the .csv files, were the files
@@ -61,7 +61,7 @@ input(details on where to find the code used in the analysis)
 SUMMARY OF DATA FILES
 ************************
 
-1. List of data files ### or is it 'datasets'?
+1. List of data files
 	Filename:char_mdata
 	Short description: .csv file containing relevant descriptive metadata on the charters included
   in the database. The variable 'f_agent' (type() = Boolean) indicates whether the charter contains
